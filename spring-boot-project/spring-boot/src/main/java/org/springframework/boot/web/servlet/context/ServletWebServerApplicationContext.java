@@ -138,6 +138,7 @@ public class ServletWebServerApplicationContext extends GenericWebApplicationCon
 	@Override
 	public final void refresh() throws BeansException, IllegalStateException {
 		try {
+			//对接spring的org.springframework.context.support.AbstractApplicationContext#refresh 方法  ->invokeBeanFactoryPostProcessors(beanFactory)
 			super.refresh();
 		}
 		catch (RuntimeException ex) {
